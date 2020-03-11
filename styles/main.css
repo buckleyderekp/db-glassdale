@@ -1,0 +1,15 @@
+.criminal {
+    border: 2px solid gray;
+    width: 230px;
+    margin: 20px;
+}
+
+.criminalsContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    text-align: center;
+    margin-top: 10px;
+}
