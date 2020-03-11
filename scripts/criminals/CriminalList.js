@@ -4,20 +4,41 @@ import criminalString from "./criminal.js";
 
 
 const contentTarget = document.querySelector(".criminalsContainer")
+const eventHub = document.querySelector(".container")
 
-const CriminalList = () => {
-    
-    
- getCriminals().then(() => {
+eventHub.addEventListener("crimeChosen", event => {
+    // Filter the list of criminal who committed the crime
 
-    const allCriminals = useCriminals()
+    // Get the criminals
+    const criminals = useCriminals()
 
-for (const criminal of allCriminals) {
-    contentTarget.innerHTML += criminalString(criminal)
-    
-}
+    // Get the crime
+    const theCrimeThatWasChosen = event.detail.chosenCrime
+
+    // Look at all of the criminals and determine if each one is a vandal
+    const guiltyCriminals = criminals.filter(criminal => {
+        if (criminal.conviction === theCrimeThatWasChosen) {
+            return true
+        }
+        return false
+    })
+
+    // Clear inner HTML of the criminal list
+    contentTarget.innerHTML = ""
+
+    // Build it up again
+    for (const singleCriminal of guiltyCriminals) {
+        contentTarget.innerHTML += criminalString(singleCriminal)
+    }
 })
 
+
+//displaying all of the criminals on the page before any filter is added
+export const CriminalList = () => {
+    const criminals = useCriminals()
+
+    for (const singleCriminal of criminals) {
+        contentTarget.innerHTML += criminalString(singleCriminal)
+    }
 }
 
-export default CriminalList
