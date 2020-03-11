@@ -8,38 +8,13 @@ export const getConvictions = () => {
         Make sure the last `then()` sets the local `convictions`
         variable to what is in the response from the API.
     */
-   return fetch("https://criminals.glassdale.us/crimes")
-   .then(response => response.json())
-   .then(
-       parsedConvictions => {
-           
-           convictions = parsedConvictions
-       }
-   )
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export const getCriminals = () => {
-    return fetch("https://criminals.glassdale.us/criminals")
+    return fetch("https://criminals.glassdale.us/crimes")
         .then(response => response.json())
         .then(
-            parsedCriminals => {
-
-                criminals = parsedCriminals
+            parsedConvictions => {
+                console.table(convictions)
+                convictions = parsedConvictions
             }
         )
 }
+

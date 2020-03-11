@@ -1,5 +1,5 @@
 const criminalString = (criminal) => {
-    return `
+  return `
     <section class="criminal">
     <header>${criminal.name} </header>
     <ul>
