@@ -5,6 +5,7 @@ import { getConvictions, useConvictions } from "./convictions/convictionProvider
 import ConvictionSelect from "./convictions/convictionSelect.js";
 import { getCriminals } from "./criminals/CriminalProvider.js";
 import NoteForm from "./notes/NoteForm.js";
+import { ToggleButtons, renderToggleButtons } from "./notes/NoteButton.js";
 
 
 
@@ -14,3 +15,4 @@ getCriminals().then(CriminalList)
 getConvictions().then(ConvictionSelect)
 
 NoteForm()
+renderToggleButtons()
