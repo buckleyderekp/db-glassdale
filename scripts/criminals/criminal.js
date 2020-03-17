@@ -7,6 +7,7 @@ const criminalString = (criminal) => {
       <li>Crime: ${criminal.conviction}</li>
       <li>Start Date: ${new Date(criminal.incarceration.start).toLocaleDateString('en-US')}</li>
       <li>End Date: ${new Date(criminal.incarceration.end).toLocaleDateString('en-US')}</li>
+      <button id="associates--${criminal.id}">Associate Alibis</button>
     </ul>
     </section>
     `

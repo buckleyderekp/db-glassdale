@@ -2,14 +2,17 @@
     border: 2px solid gray;
     width: 230px;
     margin: 20px;
+    background-color: blanchedalmond;
 }
 
 .criminalsContainer {
     display: flex;
     flex-wrap: wrap;
+    background-color: rgb(219, 216, 216);
 }
 
 header {
     text-align: center;
     margin-top: 10px;
 }
+
