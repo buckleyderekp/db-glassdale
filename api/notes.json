@@ -17,6 +17,12 @@
       "subject": "test",
       "timestamp": 1584391500215,
       "id": 3
+    },
+    {
+      "text": "another test thing",
+      "subject": "not me",
+      "timestamp": 1584555938395,
+      "id": 4
     }
   ]
 }

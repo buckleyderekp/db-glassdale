@@ -31,3 +31,9 @@ header {
     flex-wrap: nowrap;
 }
 
+.note {
+   border: 2px solid gray;
+   width: 100px;
+   margin: 10px;
+   padding: 10px;
+}
