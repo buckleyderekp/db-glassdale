@@ -22,17 +22,21 @@ eventHub.addEventListener("knownAssociatesClicked", customEvent => {
 
     KnownAssociatesDialog(iFoundYou)
 
-    const myFunnyDialog = document.querySelector("#funny")
-    myFunnyDialog.showModal()
+    const DialogBox = document.querySelector("#dialogBox")
+    DialogBox.showModal()
 })
 
 export const KnownAssociatesDialog = (criminalObject) => {
     contentTarget.innerHTML = `
-        <dialog id="funny">
+        <dialog id="dialogBox">
             ${
                 criminalObject.known_associates.map(
                     (currentAssociate) => {
-                        return `<div>${currentAssociate.name}</div>`
+                        return `<div>${currentAssociate.name}</div>
+                                <ul>
+                                    <li>${currentAssociate.alibi}</li>
+                                </ul>
+                        `
                     }
                 ).join("")
             }
