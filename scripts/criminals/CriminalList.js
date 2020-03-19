@@ -6,6 +6,26 @@ import criminalString from "./criminal.js";
 const contentTarget = document.querySelector(".criminalsContainer")
 const eventHub = document.querySelector(".container")
 
+
+contentTarget.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id.startsWith("associates--")) {
+        // Get the id of the criminal that was clicked
+        const [junk, criminalId] = clickEvent.target.id.split("--")
+
+        // Yell at the system that a known associates button was clicked
+        const showAssociatesEvent = new CustomEvent("knownAssociatesClicked", {
+            // Make sure to tell the system exactly which criminal button was clicked
+            detail: {
+                chosenCriminal: criminalId
+            }
+        })
+
+        eventHub.dispatchEvent(showAssociatesEvent)
+    }
+})
+
+
+
 eventHub.addEventListener("crimeChosen", event => {
     // Filter the list of criminal who committed the crime
 
