@@ -4,25 +4,29 @@
       "id": 1,
       "timeStamp": " ",
       "subject": "myself",
-      "text": "I didn't do it"
+      "text": "I didn't do it",
+      "criminalId": 1
     },
     {
       "text": "test",
       "subject": "test",
       "timestamp": 1584390929729,
-      "id": 2
+      "id": 2,
+      "criminalId": 2
     },
     {
       "text": "another test",
       "subject": "test",
       "timestamp": 1584391500215,
-      "id": 3
+      "id": 3,
+      "criminalId": 3
     },
     {
       "text": "another test thing",
       "subject": "not me",
       "timestamp": 1584555938395,
-      "id": 4
+      "id": 4,
+      "criminalId": 99
     }
   ]
 }

@@ -1,4 +1,4 @@
-export const Note = noteObject => {
+export const Note = (noteObject, criminalObject) => {
     return `
         <section class="note">
             <header>
@@ -6,6 +6,7 @@ export const Note = noteObject => {
             </header>
             <p>${noteObject.text}</p>
             <p>${new Date(noteObject.timestamp).toLocaleDateString()}</p>
+            <p>${criminalObject.name}</p>
         </section>
     `
 }

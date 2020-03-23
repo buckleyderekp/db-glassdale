@@ -26,7 +26,7 @@ contentTarget.addEventListener("click", clickEvent => {
         // Make a new object representation of a note
         const newNote = {
             text: text,
-            subject: subject,
+            criminalId: subject,
             timestamp: Date.now()
         }
 
