@@ -1,17 +1,19 @@
 @import "./noteForm.css";
 @import "./filters.css";
+@import "./witnessstatements.css";
 
 .criminal {
     border: 2px solid gray;
     width: 230px;
-    margin: 20px;
-    background-color: blanchedalmond;
+    margin: 10px;
+    padding: 10px;
+    background-color: whitesmoke;
 }
 
 .criminalsContainer {
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(219, 216, 216);
+ 
 }
 
 header {
@@ -33,9 +35,10 @@ header {
 
 .note {
    border: 2px solid gray;
-   width: 100px;
+   width: 150px;
    margin: 10px;
    padding: 10px;
+   background-color: whitesmoke;
 }
 
 .dialogBox__associate {
