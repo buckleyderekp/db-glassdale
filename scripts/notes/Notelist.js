@@ -1,4 +1,4 @@
-import { getNotes, useNotes } from "./noteDataProvider.js"
+import { getNotes, useNotes, deleteNote } from "./noteDataProvider.js"
 import { Note } from "./Note.js"
 import { useCriminals } from "../criminals/CriminalProvider.js"
 
@@ -27,6 +27,13 @@ eventHub.addEventListener("allNotesClicked", customEvent => {
     }
     else {
         contentTarget.classList.add("invisible")
+    }
+})
+
+contentTarget.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id.startsWith("deleteNote--")) {
+        const [_, noteId] = clickEvent.target.id.split("--")
+        deleteNote(noteId)
     }
 })
 
