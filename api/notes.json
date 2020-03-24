@@ -1,12 +1,6 @@
 {
   "notes": [
     {
-      "id": 1,
-      "timeStamp": " ",
-      "text": "I didn't do it",
-      "criminalId": 1
-    },
-    {
       "text": "guilty",
       "criminalId": 3,
       "timestamp": 1585067882236,
