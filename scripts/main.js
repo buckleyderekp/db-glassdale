@@ -10,14 +10,21 @@ import "./criminals/KnownAssociatesDialog.js"
 import { DisplayNoteFormButton } from "./notes/DisplayNoteFormButton.js";
 import { NotesList } from "./notes/Notelist.js";
 import { getNotes, useNotes } from "./notes/noteDataProvider.js";
+import { WitnessStatementButton } from "./witnesses/WitnessStatementButton.js";
+import "./witnesses/WitnessList.js"
 
 
-getCriminals().then(CriminalList)
+getCriminals()
+  .then(CriminalList)
+  .then(getNotes)
+  .then(NotesList)
+  .then(NoteForm)
 
 // first get all convictions, THEN create the conviction dropdown
-getConvictions().then(ConvictionSelect)
+getConvictions()
+  .then(ConvictionSelect)
 
-NoteForm()
+
 DisplayNotesButton()
 DisplayNoteFormButton()
-getNotes().then(NotesList)
+WitnessStatementButton()
