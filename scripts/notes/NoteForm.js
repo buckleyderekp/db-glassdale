@@ -2,18 +2,20 @@ import { saveNote } from "./noteDataProvider.js"
 import { useCriminals } from "../criminals/CriminalProvider.js"
 
 
-
+// searching the DOM for specific class and storing it in a variable 
 const contentTarget = document.querySelector(".noteFormContainer")
 const eventHub = document.querySelector(".container")
-
+// setting state on page load for noteFormContainer to be invisible
 let visibility = false
-
+// defines what happens when noteFormButton is clicked
 eventHub.addEventListener("noteFormButtonClicked", customEvent => {
+    // change visibility to true
     visibility = !visibility
-
+    // when visibility is true remove the invisiable class
     if (visibility) {
         contentTarget.classList.remove("invisible")
     }
+    // when visibility is false add invisible class
     else {
         contentTarget.classList.add("invisible")
     }
@@ -22,7 +24,7 @@ eventHub.addEventListener("noteFormButtonClicked", customEvent => {
 // Handle browser-generated click event in component
 contentTarget.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "saveNote") {
-
+    //   captures values in input fields and stores them in variables
         const text = document.querySelector("#noteText").value
         const subject = document.querySelector("#criminalDropdown").value
 
@@ -38,6 +40,7 @@ contentTarget.addEventListener("click", clickEvent => {
     }
 })
 
+// renders note form including dropdown of all criminals to choose from
 const render = () => {
     contentTarget.classList.add("invisible")
     const allCriminals = useCriminals()

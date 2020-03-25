@@ -15,9 +15,12 @@ let visibility = false
 /*
     Event handlers
 */
+// lets page know that something changed and rerenders the notelist
 eventHub.addEventListener("noteStateChanged", customEvent => {
     render()
 })
+
+// toggles invisibility by using state variable from true to false
 
 eventHub.addEventListener("allNotesClicked", customEvent => {
     visibility = !visibility
@@ -29,6 +32,9 @@ eventHub.addEventListener("allNotesClicked", customEvent => {
         contentTarget.classList.add("invisible")
     }
 })
+
+// listens for browser generated click on a delete button, splits that on the -- to capture the note id and passes that 
+// through as an argument on the delete note function
 
 contentTarget.addEventListener("click", clickEvent => {
     if (clickEvent.target.id.startsWith("deleteNote--")) {

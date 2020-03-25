@@ -1,4 +1,6 @@
 export const Note = (noteObject, criminalObject) => {
+    // html representation of one note that will render on the page. button uses primary key from note object and criminal name comes from
+    // foreign key
     return `
         <section class="note">
             <header>
